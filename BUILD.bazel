@@ -1,0 +1,35 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+load("@io_bazel_rules_go//go:def.bzl", "go_binary")
+
+py_binary(
+    name = "parent",
+    srcs = ["parent.py"],
+    args = ["$(location :go_cat)"],
+    data = [":go_cat"],
+    deps = [
+        "@rules_python//python/runfiles",
+    ],
+)
+
+go_binary(
+    name = "go_cat",
+    srcs = ["go_cat.go"],
+    data = ["important.txt"],
+    deps = [
+        "@io_bazel_rules_go//go/tools/bazel",
+    ],
+)
+
+genrule(
+    name = "parent_output",
+    outs = ["parent_output.txt"],
+    cmd = "$(location :parent) $(location :go_cat) > $@",
+    exec_tools = [":parent", ":go_cat"],
+)
+
+sh_test(
+    name = "parent_output_test",
+    srcs = ["parent_output_test.sh"],
+    args = ["$(location :parent_output)"],
+    data = [":parent_output"],
+)
