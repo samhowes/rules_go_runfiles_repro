@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: bazel test //:parent_output_test
+        run: bazel test --test_output=all //:parent_output_test
