@@ -1,0 +1,15 @@
+__init__.py 
+__main__/external/__init__.py 
+__main__/external/rules_python/__init__.py 
+__main__/external/rules_python/python/__init__.py 
+__main__/external/rules_python/python/runfiles/__init__.py 
+__main__/external/rules_python/python/runfiles/runfiles.py C:/users/sam/_bazel_sam/pj4cl7d4/external/rules_python/python/runfiles/runfiles.py
+__main__/go_cat_/go_cat.exe C:/users/sam/_bazel_sam/pj4cl7d4/execroot/__main__/bazel-out/x64_windows-opt-exec-2B5CBBC6/bin/go_cat_/go_cat.exe
+__main__/important.txt C:/users/sam/dev/rules_go_runfiles_repro/important.txt
+__main__/parent.exe C:/users/sam/_bazel_sam/pj4cl7d4/execroot/__main__/bazel-out/x64_windows-opt-exec-2B5CBBC6/bin/parent.exe
+__main__/parent.py C:/users/sam/dev/rules_go_runfiles_repro/parent.py
+__main__/parent.zip C:/users/sam/_bazel_sam/pj4cl7d4/execroot/__main__/bazel-out/x64_windows-opt-exec-2B5CBBC6/bin/parent.zip
+rules_python/__init__.py 
+rules_python/python/__init__.py 
+rules_python/python/runfiles/__init__.py 
+rules_python/python/runfiles/runfiles.py C:/users/sam/_bazel_sam/pj4cl7d4/external/rules_python/python/runfiles/runfiles.py
